@@ -12,12 +12,14 @@
   <body>
 
     <div class="container">
+
+      <!-- header -->
       <header class="main-header ">
         <div class="main-header-container">
           <h1 class="visually-hidden">Интернет-магазин Device инновационных товаров и гаджетов</h1>
           <div class="header-logo-wrapper">
-            <a class="header-logo-header-link" href="index.html">
-              <img class="header-logo-header-img" src="img/logo-header.png" alt="Логотип device">
+            <a class="header-logo-link link-status" href="index.html">
+              <img class="header-logo-img" src="img/logo-header.png" alt="Логотип device">
             </a>
           </div>
           <div class="header-top">
@@ -30,19 +32,21 @@
             </div>
             <nav class="nav-menu">
               <div class="nav-user-wrapper">
-                <a class="nav-user-link nav-link" href="#">
+                <a class="nav-user-link nav-link link-status" href="#">
                   <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M0.5 12H13.5C13.3 9.4 11.4 7.2 8.8 6.5C9.8 5.9 10.5 4.8 10.5 3.5C10.5 1.6 8.9 0 7 0C5.1 0 3.5 1.6 3.5 3.5C3.5 4.8 4.2 5.9 5.2 6.5C2.6 7.2 0.7 9.4 0.5 12Z"
                       fill="currentColor" />
                   </svg>
-                  <span class="nav-link-name">Войти</span>
+                  <span class="nav-link-name nav-link-auth" id="auth-user">Войти</span>
+                  <!-- Добавить для реализации  авторизованного пользователя -->
+                  <span class="nav-link-name nav-link-auth-active" id="auth-user">Коля Петухов</span>
                 </a>
               </div>
 
               <ul class="nav-site-list">
                 <li class="nav-site-item">
-                  <a class="nav-site-link nav-link" href="#">
+                  <a class="nav-site-link nav-link link-status" href="#">
                     <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 0H4V12H6V0Z" fill="currentColor" />
                       <path d="M2 4H0V12H2V4Z" fill="currentColor" />
@@ -52,7 +56,7 @@
                   </a>
                 </li>
                 <li class="nav-site-item">
-                  <a class="nav-site-link nav-link" href="#">
+                  <a class="nav-site-link nav-link link-status" href="#">
                     <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"
@@ -68,7 +72,7 @@
           <div class="header-content-wrapper">
             <div class="header-catalog-container" id="header-dropdown">
               <!-- <h3 class="header-catalog-list-title header-content-title">Каталог товаров</h3> -->
-              <button class="header-catalog-btn btn header-content-title" id="btn-dropdown" type="button"
+              <button class="header-catalog-btn header-content-title" id="btn-dropdown" type="button"
                 data-toggle="#faq1">
                 Каталог товаров
                 <span class="header-content-icon">
@@ -79,29 +83,29 @@
               <div class="header-catalog-list-wrapper">
                 <ul class="header-catalog-list">
                   <li class="header-catalog-item">
-                    <a class="header-catalog-link" href="#">Виртуальная реальность</a>
+                    <a class="header-catalog-link link-status" href="#">Виртуальная реальность</a>
                   </li>
                   <li class="header-catalog-item">
-                    <a class="header-catalog-link" href="#">Моноподы для cелфи</a>
+                    <a class="header-catalog-link link-status" href="#">Моноподы для cелфи</a>
                   </li>
                   <li class="header-catalog-item">
-                    <a class="header-catalog-link" href="#">Экшн-камеры
+                    <a class="header-catalog-link link-status" href="#">Экшн-камеры
                     </a>
                   </li>
                 </ul>
 
                 <ul class="header-catalog-list">
                   <li class="header-catalog-item">
-                    <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
+                    <a class="header-catalog-link link-status" href="#">Фитнес-браслеты</a>
                   </li>
                   <li class="header-catalog-item">
-                    <a class="header-catalog-link" href="#">Умные часы</a>
+                    <a class="header-catalog-link link-status" href="#">Умные часы</a>
                   </li>
                 </ul>
 
                 <ul class="header-catalog-list">
                   <li class="header-catalog-item">
-                    <a class="header-catalog-link" href="#">Квадрокоптеры</a>
+                    <a class="header-catalog-link link-status" href="#">Квадрокоптеры</a>
                   </li>
                 </ul>
               </div>
@@ -109,21 +113,64 @@
             <div class="header-content-features-wrapper">
               <ul class="header-content-features-list">
                 <li class="header-content-features-item header-content-title">
-                  <a class="header-content-features-link" href="#">Доставка</a>
+                  <a class="header-content-features-link link-status" href="#">Доставка</a>
                 </li>
                 <li class="header-content-features-item header-content-title">
-                  <a class="header-content-features-link" href="#">Гарантия</a>
+                  <a class="header-content-features-link link-status" href="#">Гарантия</a>
                 </li>
                 <li class="header-content-features-item header-content-title">
-                  <a class="header-content-features-link" href="#">Контакты</a>
+                  <a class="header-content-features-link link-status" href="#">Контакты</a>
                 </li>
               </ul>
             </div>
           </div>
       </header>
-      <main>
-        <section>
 
+      <!-- main -->
+      <main>
+
+        <!-- hero -->
+        <section class="hero">
+          <div class="hero-slider-container swiper-container">
+            <ul class="hero-list hero-slider-wrapper swiper-wrapper">
+
+              <li class="hero-item hero-slide swiper-slide">
+                <div class="hero-img-wrapper">
+                  <img class="hero-img" src="img/hero/hero-slider-01.png" alt="Квадракоптер">
+                </div>
+                <div class="hero-content">
+                  <span class="hero-content-number">01</span>
+                  <h2>Порхает как бабочка,
+                    жалит как пчела!</h2>
+                  <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
+                    стандартную камеру.
+                  </p>
+
+                  <a class="hero-btn btn" href="#">Подробнее</a>
+
+                  <div class="hero-details-wrapper">
+                    <div class="hero-details">
+                      <span class="hero-details-data">800 м</span>
+                      <p class="hero-details-desc">Дальность полета</p>
+                    </div>
+                    <div class="hero-details">
+                      <span class="hero__details-data">50 м</span>
+                      <p class="hero-details-desc">Радиус поражения</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="hero-item hero-slide swiper-slide">
+              </li>
+
+              <li class="hero-item hero-slide swiper-slide">
+              </li>
+
+            </ul>
+            <div class="hero-swiper-pagination swiper-pagination">
+            </div>
+          </div>
         </section>
       </main>
       <footer>
