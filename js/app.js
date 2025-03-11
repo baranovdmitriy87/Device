@@ -18,6 +18,38 @@ const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
 
 // navUserShow();
 
+// Инициализация слайдера
+const initHeroSlider = () => {
+
+  const slider = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    allowTouchMove: false,
+    // effect:"fade",
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+
+    // fadeeffect: {
+    //   crossFade: true
+    // },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  return slider;
+};
+
+initHeroSlider();
+
 // Показать список товаров каталога
 const dropdownShow = () => {
   btnDropdown.addEventListener("click", () => {

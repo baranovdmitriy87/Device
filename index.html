@@ -2,9 +2,10 @@
 <html lang="ru">
 
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/styles.css">
     <meta name="description" content="Интернет-магазин Device инновационных товаров и гаджетов">
     <title>Интернет-магазин Device инновационных товаров и гаджетов</title>
   </head>
@@ -110,19 +111,19 @@
                 </ul>
               </div>
             </div>
-            <div class="header-content-features-wrapper">
-              <ul class="header-content-features-list">
-                <li class="header-content-features-item header-content-title">
-                  <a class="header-content-features-link link-status" href="#">Доставка</a>
-                </li>
-                <li class="header-content-features-item header-content-title">
-                  <a class="header-content-features-link link-status" href="#">Гарантия</a>
-                </li>
-                <li class="header-content-features-item header-content-title">
-                  <a class="header-content-features-link link-status" href="#">Контакты</a>
-                </li>
-              </ul>
-            </div>
+            <!-- <div class="header-content-features-wrapper"> -->
+            <ul class="header-content-features-list">
+              <li class="header-content-features-item header-content-title">
+                <a class="header-content-features-link link-status" href="#">Доставка</a>
+              </li>
+              <li class="header-content-features-item header-content-title">
+                <a class="header-content-features-link link-status" href="#">Гарантия</a>
+              </li>
+              <li class="header-content-features-item header-content-title">
+                <a class="header-content-features-link link-status" href="#">Контакты</a>
+              </li>
+            </ul>
+            <!-- </div> -->
           </div>
       </header>
 
@@ -131,22 +132,24 @@
 
         <!-- hero -->
         <section class="hero">
+
           <div class="hero-slider-container swiper-container">
             <ul class="hero-list hero-slider-wrapper swiper-wrapper">
 
               <li class="hero-item hero-slide swiper-slide">
                 <div class="hero-img-wrapper">
-                  <img class="hero-img" src="img/hero/hero-slider-01.png" alt="Квадракоптер">
+                  <img class="hero-img" src="img/hero/hero-slider-01.png" width="560" height="560" alt="Квадракоптер">
                 </div>
                 <div class="hero-content">
                   <span class="hero-content-number">01</span>
                   <h2>Порхает как бабочка,
                     жалит как пчела!</h2>
-                  <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
+                  <p class="hero-content-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+                    замаскированным под
                     стандартную камеру.
                   </p>
 
-                  <a class="hero-btn btn" href="#">Подробнее</a>
+                  <a class="hero-btn btn link-status" href="#">Подробнее</a>
 
                   <div class="hero-details-wrapper">
                     <div class="hero-details">
@@ -160,15 +163,68 @@
                   </div>
                 </div>
               </li>
-
               <li class="hero-item hero-slide swiper-slide">
-              </li>
+                <div class="hero-img-wrapper">
+                  <img class="hero-img" src="img/hero/hero-slider-02.png" width="560" height="560" alt="Смартчасы">
+                </div>
+                <div class="hero-content">
+                  <span class="hero-content-number">02</span>
+                  <h2>Худеем
+                    правильно!</h2>
+                  <p class="hero-content-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+                    занятия и соблюдать диету.
+                  </p>
 
+                  <a class="hero-btn btn link-status" href="#">Подробнее</a>
+
+                  <div class="hero-details-wrapper">
+                    <div class="hero-details">
+                      <span class="hero-details-data">48 часов</span>
+                      <p class="hero-details-desc">Без подзарядки</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
               <li class="hero-item hero-slide swiper-slide">
-              </li>
+                <div class="hero-img-wrapper">
+                  <img class="hero-img" src="img/hero/hero-slider-03.png" width="560" height="560"
+                    alt="Палка для селфи">
+                </div>
+                <div class="hero-content">
+                  <span class="hero-content-number">03</span>
+                  <h2>Делай селфи,
+                    как Бен Стиллер! </h2>
+                  <p class="hero-content-desc">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
+                    Карл!) метров длиной и
+                    весом всего 5 кг.
+                  </p>
 
+                  <a class="hero-btn btn link-status" href="#">Подробнее</a>
+
+                  <div class="hero-details-wrapper">
+                    <div class="hero-details">
+                      <span class="hero-details-data">8,5 м</span>
+                      <p class="hero-details-desc">Длина палки</p>
+                    </div>
+                    <div class="hero-details">
+                      <span class="hero__details-data">5 кг</span>
+                      <p class="hero-details-desc">Вес палки</p>
+                    </div>
+                    <div class="hero-details">
+                      <span class="hero__details-data">Карбон</span>
+                      <p class="hero-details-desc">Материал</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
             <div class="hero-swiper-pagination swiper-pagination">
+              <!-- <button class="hero-swiper-pagination-bullet" type="button"></button> -->
+            </div>
+
+            <div class="hero-arrows">
+              <button type="button" class="hero-button-prev arrow-slider-btn swiper-button-prev link-status"></button>
+              <button type="button" class="hero-button-next arrow-slider-btn swiper-button-next link-status"></button>
             </div>
           </div>
         </section>
@@ -177,6 +233,7 @@
 
       </footer>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 
