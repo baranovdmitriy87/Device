@@ -2,6 +2,29 @@ const btnDropdown = document.querySelector(".header-catalog-btn");
 const listWrapper = document.querySelector(".header-catalog-list-wrapper");
 const isActiveFeaturesLinks = document.querySelectorAll(".header-content-features-link");
 const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
+const tabs = document.querySelectorAll('.features-tab-link');
+const contentItems = document.querySelectorAll('.features-content');
+
+
+//  =============   features tabs
+const toggleTabs = () => {
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      tabs.forEach((el) => {
+        el.classList.remove('is-active');
+      }, { once: true });
+      tab.classList.add('is-active');
+
+      contentItems.forEach((item) => {
+        item.classList.add('is-hidden');
+      });
+      contentItems[i].classList.remove('is-hidden');
+    });
+  });
+}
+toggleTabs();
+
 // const navUserLink = document.querySelector(".nav-user-link span");
 // const authUser = document.querySelector(".nav-link-auth");
 // const authNoUser = document.querySelector(".nav-link-auth-active");
@@ -18,7 +41,7 @@ const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
 
 // navUserShow();
 
-// Инициализация слайдера
+//  ============  Инициализация слайдера
 const initHeroSlider = () => {
 
   const slider = new Swiper('.swiper-container', {
@@ -50,7 +73,7 @@ const initHeroSlider = () => {
 
 initHeroSlider();
 
-// Показать список товаров каталога
+//  =================  Показать список товаров каталога
 const dropdownShow = () => {
   btnDropdown.addEventListener("click", () => {
     btnDropdown.classList.toggle("is-active");
@@ -66,7 +89,7 @@ const dropdownShow = () => {
 
 dropdownShow();
 
-// Показать активный features элемент
+// ===============   Показать активный features элемент
 const featuresShow = () => {
   isActiveFeaturesLinks.forEach((link) => {
     link.addEventListener('click', (evt) => {
@@ -81,7 +104,7 @@ const featuresShow = () => {
 
 featuresShow();
 
-// Показать активный элемент в каталоге товаров
+// ============= Показать активный элемент в каталоге товаров
 const catalogProductsShow = () => {
   showCatalogLinks.forEach((link) => {
     link.addEventListener('click', (evt) => {

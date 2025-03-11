@@ -1,4 +1,4 @@
-/* базовые стили */
+/* =====  базовые стили  ====== */
 *,
 *::after,
 *::before {
@@ -54,7 +54,7 @@ html {
   padding: 0;
 }
 
-/*Подключить по необходимости  */
+/* Подключить по необходимости  */
 img {
   height: auto;
   object-fit: cover;
@@ -96,7 +96,7 @@ body {
   overflow: hidden;
 }
 
-/* buttons */
+/* ======  buttons  ====== */
 .btn {
   font-family: inherit;
   font-size: 16px;
@@ -215,17 +215,15 @@ body {
   outline: unset;
 }
 
-/* main container */
+/*  =======  container  ======= */
 .container {
   width: 1160px;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: #FFF;
 }
 
-/* header */
+/*  =======   header   ========   */
 .main-header {
   padding-top: 30px;
 }
@@ -366,10 +364,6 @@ body {
    margin-left: 9px;
   }
 
-  /* .nav-link-auth  {
-    display: none;
-  } */
-
   .notification-badge {
     display: flex;
     align-items: center;
@@ -435,17 +429,6 @@ body {
   animation-name: slideDown; /* Применяем анимацию открытия */
 }
 
-/* .header-catalog-list-wrapper.opened::after {
-  content: '';
-  position: absolute;
-  left: -51px;
-  width: 1158px;
-  min-height: 146px;
-  background-color: var(--additional-yellow);
-  z-index: -1;
-} */
-
-
 .header-catalog-list-wrapper.closed {
   display: none;
   animation-name: slideUp; /* Применяем анимацию закрытия */
@@ -476,10 +459,6 @@ body {
 .header-catalog-list:last-child {
   margin-left: 16px;
 }
-
-/* .header-catalog-list {
-  padding-left: 4px;
-} */
 
 .header-catalog-item {
   margin-bottom: 10px;
@@ -516,13 +495,13 @@ body {
   }
 
   .header-content-title {
-    color: var(--primary-color-black);
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 21px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+  color: var(--primary-color-black);
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .header-content-icon {
@@ -568,19 +547,8 @@ body {
   background-color: var(--primary-color-black);
 }
 
-/* .header-content-features-wrapper {
-  position: absolute;
-  top: 15px;
-  right: -4px;
-} */
 
-/* .header-content-features-item:last-child {
-margin-left: 4px;
-} */
-
-
-
-/* hero,  Swiper-Slider */
+/* ====== hero section,  Swiper-Slider ====== */
 .hero-swiper-pagination.swiper-pagination {
   bottom: 60px;
 }
@@ -706,10 +674,6 @@ margin-left: 4px;
   /* margin-bottom: 60px; */
 }
 
-.hero-content {
-
-}
-
 .hero-content h2 {
   color: var(--primary-color-black);
   font-family: Raleway;
@@ -778,5 +742,223 @@ margin-left: 4px;
   margin: 0;
 }
 
+/* =======   category section   ======= */
+.category-container {
+  display: flex;
+  justify-content: center;
+  padding: 4px 0 70px;}
 
-/* footer */
+.category-list {
+  display: flex;
+  gap: 40px;
+
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* padding-bottom: 15px; */
+
+  &:nth-child(2) svg {
+    align-self: flex-end;
+  }
+}
+
+.category-icon-wrapper {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--additional-yellow);
+}
+
+.category-item p {
+color: var(--primary-color-black);
+font-family: "Raleway", sans-serif;
+font-size: 18px;
+font-weight: 800;
+line-height: 24px;
+letter-spacing: -0.3px;
+margin: 33px 0 0;
+}
+
+.category-link {
+  min-height: 253px;
+}
+
+.category-link:hover {
+  opacity: 1;
+
+  .category-icon-wrapper {
+    background-color: var(--additional-yellow-hover);
+  }
+}
+.category-link:active {
+  opacity: 0.3;
+}
+
+/*  =======  features  ========= */
+.features {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 290px;
+    background-color: var(--primary-color-light-grey);
+    z-index: -10;
+  }
+}
+
+.features-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 391px;
+  padding: 41px 0;
+  column-gap: 116px;
+}
+
+.features-tab-list {
+  /* width: 500px; */
+  padding: 23px 0;
+  display: flex;
+  max-height: 237px;
+  flex-direction: column;
+  gap: 34px;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -42px;
+    right: 0;
+    width: 7px;
+    height: 319px;
+    background-color: var(--primary-color-black);
+  }
+}
+
+.features-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:last-child button {
+    padding-left: 34px;
+
+    &:hover {
+      padding-left: 70px;
+    }
+
+    &:active {
+      padding-left: 70px;
+    }
+  }
+}
+
+.features-tab-item:last-child button.is-active {
+  padding-left: 70px;
+}
+
+.features-tab-link {
+  color: var(--primary-color-black);
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 3.7px;
+  width: 288px;
+  text-align: left;
+  text-transform: uppercase;
+
+  border:none;
+  padding: 10px 19px;
+  background-color: transparent;
+  cursor:pointer;
+
+
+  &:hover {
+    background-color: var(--primary-color-black);
+    color: var(--additional-yellow);
+    padding-left: 60px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--additional-phiolet);
+    outline-offset: 2px;
+  }
+
+  &:active {
+
+  }
+}
+
+.features-tab-link.btn::before {
+  width: 55%;
+}
+
+.features-tab-link.link-status:focus-visible.is-active {
+  outline-offset: 2px;
+}
+
+.features-tab-link.is-active {
+  background-color:var(--primary-color-black);
+  color: var(--additional-yellow);
+  padding-left: 60px;
+}
+
+.features-content {
+  display: flex;
+
+  svg {
+    margin: 35px 0 0 77px;
+  }
+}
+
+.features-title {
+  color: var(--primary-color-black);
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  text-align: left;
+
+  margin: 32px 0 0;
+}
+
+.features-content p {
+  display: flex;
+  width: 480px;
+  margin: 33px 0 0;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: left;
+
+}
+
+
+.features-content-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* .tab__content {
+display: block;
+} */
+
+.features-content.is-hidden {
+  display:none;
+}
+
+
+/*  =======   footer   ======= */
