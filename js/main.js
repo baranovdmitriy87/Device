@@ -1,12 +1,12 @@
 const btnDropdown = document.querySelector(".header-catalog-btn");
 const listWrapper = document.querySelector(".header-catalog-list-wrapper");
-const isActiveFeaturesLinks = document.querySelectorAll(".header-content-features-link");
+const isActiveServicesLinks = document.querySelectorAll(".header-content-services-link");
 const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
-const tabs = document.querySelectorAll('.features-tab-link');
-const contentItems = document.querySelectorAll('.features-content');
+const tabs = document.querySelectorAll('.services-tab-link');
+const contentItems = document.querySelectorAll('.services-content');
 
 
-//  =============   features tabs
+//  =============   services tabs
 const toggleTabs = () => {
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', (evt) => {
@@ -89,12 +89,12 @@ const dropdownShow = () => {
 
 dropdownShow();
 
-// ===============   Показать активный features элемент
-const featuresShow = () => {
-  isActiveFeaturesLinks.forEach((link) => {
+// ===============   Показать активный services элемент
+const servicesShow = () => {
+  isActiveServicesLinks.forEach((link) => {
     link.addEventListener('click', (evt) => {
       evt.preventDefault();
-      isActiveFeaturesLinks.forEach((el) => {
+      isActiveServicesLinks.forEach((el) => {
         el.classList.remove('is-active');
       });
       link.classList.add('is-active');
@@ -102,7 +102,7 @@ const featuresShow = () => {
   });
 }
 
-featuresShow();
+servicesShow();
 
 // ============= Показать активный элемент в каталоге товаров
 const catalogProductsShow = () => {
