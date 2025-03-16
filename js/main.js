@@ -41,29 +41,6 @@ toggleTabs();
 
 // navUserShow();
 
-//  ============  Инициализация слайдера
-const initHeroSlider = () => {
-
-  const slider = new Swiper('.swiper-container', {
-    direction: 'horizontal',
-    loop: true,
-    allowTouchMove: false,
-
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
-  return slider;
-};
-
-initHeroSlider();
-
 //  =================  Показать список товаров каталога
 const dropdownShow = () => {
   btnDropdown.addEventListener("click", () => {
@@ -79,6 +56,28 @@ const dropdownShow = () => {
 }
 
 dropdownShow();
+
+//  ============  Инициализация слайдера
+const initHeroSlider = () => {
+
+ new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    allowTouchMove: false,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+};
+
+initHeroSlider();
 
 // ===============   Показать активный services элемент
 const servicesShow = () => {
