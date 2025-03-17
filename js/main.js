@@ -2,8 +2,13 @@ const btnDropdown = document.querySelector(".header-catalog-btn");
 const listWrapper = document.querySelector(".header-catalog-list-wrapper");
 const isActiveServicesLinks = document.querySelectorAll(".header-content-services-link");
 const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
+
 const tabs = document.querySelectorAll('.services-tab-link');
 const contentItems = document.querySelectorAll('.services-content');
+
+const navUserLink = document.querySelector(".nav-user-link");
+const authUser = document.querySelector(".nav-link-auth");
+const authActiveUser = document.querySelector(".nav-link-auth-active");
 
 
 //  =============   services tabs
@@ -25,21 +30,23 @@ const toggleTabs = () => {
 }
 toggleTabs();
 
-// const navUserLink = document.querySelector(".nav-user-link span");
-// const authUser = document.querySelector(".nav-link-auth");
-// const authNoUser = document.querySelector(".nav-link-auth-active");
+/*   ==========   Вход/выход аккаунта   ========= */
+const navUserShow = () => {
 
-// const navUserShow = () => {
+  navUserLink.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    if (navUserLink.classList.toggle('nav-user-link')) {
+      authActiveUser.classList.add
+      authActiveUser.style.display = 'inline-flex'
+      authUser.style.display = 'none'
+    } else {
+      authUser.style.display = 'inline-flex'
+      authActiveUser.style.display = 'none'
+    }
+  });
+}
 
-//   navUserLink.addEventListener('click', (evt) => {
-//     evt.preventDefault();
-//     authUser.classList.remove('nav-link-auth');
-//     authNoUser.classList.add('nav-link-auth-active');
-//     console.log ('click')
-//   });
-// }
-
-// navUserShow();
+navUserShow();
 
 //  =================  Показать список товаров каталога
 const dropdownShow = () => {
@@ -60,7 +67,7 @@ dropdownShow();
 //  ============  Инициализация слайдера
 const initHeroSlider = () => {
 
- new Swiper('.swiper-container', {
+  new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,

@@ -12,28 +12,27 @@
 
   <body>
 
-    <!-- <div class="container"> -->
 
     <!-- header -->
     <header class="main-header ">
       <div class="main-header-container container">
         <h1 class="visually-hidden">Интернет-магазин Device инновационных товаров и гаджетов</h1>
         <div class="header-logo-wrapper">
-          <a class="header-logo-link link-status" href="index.html">
+          <a class="header-logo-link link-animation" href="index.html">
             <img class="header-logo-img" src="img/logo-header.png" alt="Логотип device">
           </a>
         </div>
         <div class="header-top">
           <div class="form-search-wrapper">
             <form class="form-search" action="/search" method="GET">
-              <label class="form-search-label" for="form-search-element"></label>
+              <label class="form-search-label form-search-icon" for="form-search-element"></label>
               <input class="input-search" type="text" name="query" placeholder="Поиск по сайту" aria-label="Поиск" />
-              <button class="btn-search btn" type="submit" aria-label="Найти">Найти</button>
+              <button class="btn-search" type="submit" aria-label="Найти">Найти</button>
             </form>
           </div>
           <nav class="nav-menu">
             <div class="nav-user-wrapper">
-              <a class="nav-user-link nav-link link-status" href="#">
+              <a class="nav-user-link nav-link link-animation" href="#">
                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0.5 12H13.5C13.3 9.4 11.4 7.2 8.8 6.5C9.8 5.9 10.5 4.8 10.5 3.5C10.5 1.6 8.9 0 7 0C5.1 0 3.5 1.6 3.5 3.5C3.5 4.8 4.2 5.9 5.2 6.5C2.6 7.2 0.7 9.4 0.5 12Z"
@@ -42,12 +41,13 @@
                 <span class="nav-link-name nav-link-auth" id="auth-user">Войти</span>
                 <!-- Добавить для реализации  авторизованного пользователя -->
                 <span class="nav-link-name nav-link-auth-active" id="auth-user">Коля Петухов</span>
+                <!-- <span class="nav-link-name nav-link-auth-closed" id="auth-user">Выйти</span> -->
               </a>
             </div>
 
             <ul class="nav-site-list">
               <li class="nav-site-item">
-                <a class="nav-site-link nav-link link-status" href="#">
+                <a class="nav-site-link nav-link link-animation" href="#">
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0H4V12H6V0Z" fill="currentColor" />
                     <path d="M2 4H0V12H2V4Z" fill="currentColor" />
@@ -57,7 +57,7 @@
                 </a>
               </li>
               <li class="nav-site-item">
-                <a class="nav-site-link nav-link link-status" href="#">
+                <a class="nav-site-link nav-link link-animation" href="#">
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"
@@ -83,29 +83,29 @@
             <div class="header-catalog-list-wrapper">
               <ul class="header-catalog-list">
                 <li class="header-catalog-item">
-                  <a class="header-catalog-link link-status" href="#category">Виртуальная реальность</a>
+                  <a class="header-catalog-link link-animation" href="#category">Виртуальная реальность</a>
                 </li>
                 <li class="header-catalog-item">
-                  <a class="header-catalog-link link-status" href="#category">Моноподы для cелфи</a>
+                  <a class="header-catalog-link link-animation" href="#category">Моноподы для cелфи</a>
                 </li>
                 <li class="header-catalog-item">
-                  <a class="header-catalog-link link-status" href="#category">Экшн-камеры
+                  <a class="header-catalog-link link-animation" href="#category">Экшн-камеры
                   </a>
                 </li>
               </ul>
 
               <ul class="header-catalog-list">
                 <li class="header-catalog-item">
-                  <a class="header-catalog-link link-status" href="#category">Фитнес-браслеты</a>
+                  <a class="header-catalog-link link-animation" href="#category">Фитнес-браслеты</a>
                 </li>
                 <li class="header-catalog-item">
-                  <a class="header-catalog-link link-status" href="#category">Умные часы</a>
+                  <a class="header-catalog-link link-animation" href="#category">Умные часы</a>
                 </li>
               </ul>
 
               <ul class="header-catalog-list">
                 <li class="header-catalog-item">
-                  <a class="header-catalog-link link-status" href="#category">Квадрокоптеры</a>
+                  <a class="header-catalog-link link-animation" href="#category">Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
@@ -113,13 +113,13 @@
           <!-- <div class="header-content-services-wrapper"> -->
           <ul class="header-content-services-list">
             <li class="header-content-services-item header-content-title">
-              <a class="header-content-services-link link-status" href="#">Доставка</a>
+              <a class="header-content-services-link link-animation" href="#">Доставка</a>
             </li>
             <li class="header-content-services-item header-content-title">
-              <a class="header-content-services-link link-status" href="#">Гарантия</a>
+              <a class="header-content-services-link link-animation" href="#">Гарантия</a>
             </li>
             <li class="header-content-services-item header-content-title">
-              <a class="header-content-services-link link-status" href="#">Контакты</a>
+              <a class="header-content-services-link link-animation" href="#">Контакты</a>
             </li>
           </ul>
           <!-- </div> -->
@@ -148,7 +148,7 @@
                   стандартную камеру.
                 </p>
 
-                <a class="hero-btn btn link-status" href="#">Подробнее</a>
+                <a class="hero-btn btn" href="#">Подробнее</a>
 
                 <div class="hero-details-wrapper">
                   <div class="hero-details">
@@ -174,7 +174,7 @@
                   занятия и соблюдать диету.
                 </p>
 
-                <a class="hero-btn btn link-status" href="#">Подробнее</a>
+                <a class="hero-btn btn" href="#">Подробнее</a>
 
                 <div class="hero-details-wrapper">
                   <div class="hero-details">
@@ -197,7 +197,7 @@
                   весом всего 5 кг.
                 </p>
 
-                <a class="hero-btn btn link-status" href="#">Подробнее</a>
+                <a class="hero-btn btn link-animation" href="#">Подробнее</a>
 
                 <div class="hero-details-wrapper">
                   <div class="hero-details">
@@ -217,12 +217,11 @@
             </li>
           </ul>
           <div class="hero-swiper-pagination swiper-pagination">
-            <!-- <button class="hero-swiper-pagination-bullet" type="button"></button> -->
           </div>
 
           <div class="hero-arrows">
-            <button type="button" class="hero-button-prev arrow-slider-btn swiper-button-prev link-status"></button>
-            <button type="button" class="hero-button-next arrow-slider-btn swiper-button-next link-status"></button>
+            <button type="button" class="hero-button-prev arrow-slider-btn swiper-button-prev link-animation"></button>
+            <button type="button" class="hero-button-next arrow-slider-btn swiper-button-next link-animation"></button>
           </div>
         </div>
       </section>
@@ -232,7 +231,7 @@
         <div class="category-container">
           <ul class="category-list">
             <li class="category-item">
-              <a class="category-link link-status" href="#">
+              <a class="category-link link-animation" href="#">
                 <div class="category-icon-wrapper icon-wrapper">
                   <svg width="97" height="55" viewBox="0 0 97 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -250,7 +249,7 @@
               </a>
             </li>
             <li class="category-item">
-              <a class="category-link link-status" href="#">
+              <a class="category-link link-animation" href="#">
                 <div class="category-icon-wrapper icon-wrapper">
                   <svg width="87" height="117" viewBox="0 0 87 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -266,7 +265,7 @@
               </a>
             </li>
             <li class="category-item">
-              <a class="category-link link-status" href="#">
+              <a class="category-link link-animation" href="#">
                 <div class="category-icon-wrapper icon-wrapper">
                   <svg width="72" height="87" viewBox="0 0 72 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -305,7 +304,7 @@
               </a>
             </li>
             <li class="category-item">
-              <a class="category-link link-status" href="#">
+              <a class="category-link link-animation" href="#">
                 <div class="category-icon-wrapper icon-wrapper">
                   <svg width="108" height="66" viewBox="0 0 108 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -321,7 +320,7 @@
               </a>
             </li>
             <li class="category-item">
-              <a class="category-link link-status" href="#">
+              <a class="category-link link-animation" href="#">
                 <div class="category-icon-wrapper icon-wrapper">
                   <svg width="56" height="98" viewBox="0 0 56 98" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -340,7 +339,7 @@
               </a>
             </li>
             <li class="category-item">
-              <a class="category-link link-status" href="#">
+              <a class="category-link link-animation" href="#">
                 <div class="category-icon-wrapper icon-wrapper">
                   <svg width="133" height="69" viewBox="0 0 133 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -530,9 +529,9 @@
         </div>
       </section>
 
-      <!-- de -->
+      <!-- delivery -->
       <section class="delivery">
-        <a class="delivery-container link-status container delivery-link">
+        <a class="delivery-container link-animation container delivery-link" href="#">
           <div class="delivery-icon-wrapper icon-wrapper">
             <svg width="47" height="31" viewBox="0 0 47 31" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -571,11 +570,59 @@
         </a>
       </section>
 
+      <!-- contacts -->
+      <section class="contacts">
+        <div class="contacts-container container">
+          <div class="about-content content-container">
+            <h2 class="about-title">О нас</h2>
+            <p class="about-desc">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p class="about-desc">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными
+              компаниями:</p>
+            <span>Меловые линии</span>
+            <span>СДИК</span>
+            <span>ТоксБерри</span>
+            <a class="about-btn btn" href="#">Подробнее о нас</a>
+          </div>
+
+          <div class="contacts-content content-container">
+            <h2 class="contacts-title">Контакты</h2>
+            <p class="about-desc">Вы можете забрать товар сами, заехав в наш офис.<br>
+              Заодно сможете проверить работоспособность покупки. </p>
+            <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
+            <p class="about-desc about-adress">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+            <a class="contacts-phone link-animation" href="#">+7 (812) 812-12-12</a>
+            <h3 class="contacts-subtitle">Время работы</h3>
+            <span>пн—пт: с 10:00 до 22:00</span>
+            <span>сб—вс: с 10:00 до 19:00</span>
+
+            <a class="contacts-btn btn" href="#">Напишите нам</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- subscribe -->
+      <section class="subscribe">
+        <div class="subscribe-container container">
+          <div class="subscribe-content">
+            <h2>Подпишитесь на рассылку</h2>
+            <p>Еженедельный дайджест с обзорами новинок, <br>
+              длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          </div>
+
+          <div class="subscribe-form-wrapper">
+            <form class="subscribe-form" action="#" method="get">
+              <label class="subscribe-form-label" for="subscribe-form-element"></label>
+              <input class="subscribe-form-field" type="text" placeholder="Ваш e-mail" aria-label="e-mail">
+              <button class="btn-subscribe btn" type="submit" aria-label="Подписаться">Подписаться</button>
+            </form>
+            <span class="subscribe-mark">Это бесплатно</span>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
 
     </footer>
-    <!-- </div> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
