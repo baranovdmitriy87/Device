@@ -10,6 +10,32 @@ const navUserLink = document.querySelector(".nav-user-link");
 const authUser = document.querySelector(".nav-link-auth");
 const authActiveUser = document.querySelector(".nav-link-auth-active");
 
+const tooltipLink = document.querySelector('.nav-site-link-tooltip');
+const tooltip = document.getElementById('tooltip-cart');
+
+/*   ==========  tooltip-cart  ========= */
+const tooltipShow = () => {
+
+  // Показываем/скрываем тултип при клике на ссылку
+  tooltipLink.addEventListener('click', function (event) {
+    event.preventDefault(); // Отменяем стандартное поведение ссылки
+    tooltip.classList.toggle('visible'); // Переключаем видимость тултипа
+  });
+
+  // Скрываем тултип при клике вне его области
+  document.addEventListener('click', function (event) {
+    if (!tooltip.contains(event.target) && event.target !== tooltipLink) {
+      tooltip.classList.remove('visible');
+    }
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      tooltip.classList.remove('visible');
+    }
+  });
+}
+
+tooltipShow();
 
 //  =============   services tabs
 const toggleTabs = () => {

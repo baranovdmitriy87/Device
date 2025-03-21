@@ -136,7 +136,7 @@ button {
 
 	&:focus-visible {
 		outline: 2px solid var(--additional-phiolet);
-		outline-offset: 2px;         /* border-radius: unset; */
+		outline-offset: 2px;
 		transition: none;
 	}
 
@@ -404,116 +404,125 @@ button {
 }
 
 .nav-site-link-tooltip {
-  position: relative;
+	position: relative;
 }
 
-  /* tooltip   */
+/* tooltip   */
 
-  .nav-site-link-tooltip:hover + .tooltip-wrapper,
-  .nav-site-link-tooltip:focus + .tooltip-wrapper {
+/* .nav-site-link-tooltip:hover + .tooltip-wrapper,
+  .tooltip-wrapper:hover {
     display: flex;
-  }
+    pointer-events: auto;
+  } */
 
 .tooltip-wrapper {
-  display: none;
-  width: 320px;
-  padding: 0 0 20px;
-  flex-direction: column;
-  background-color: var(--primary-color-black);
-  z-index: 10;
-  position: absolute;
-  right: 0;
+	display: none;
+	width: 320px;
+	padding: 0 0 20px;
+	flex-direction: column;
+	background-color: var(--primary-color-black);
+	z-index: 10;
+	position: absolute;
+	right: 0;
+	pointer-events: auto;
 
-  svg {
-    position: absolute;
-    top: -5px;
-    left: 50%;
-  }
+	svg {
+		position: absolute;
+		top: -5px;
+		left: 50%;
+	}
+
+}
+
+.tooltip-wrapper.visible {
+	display: flex;
 }
 
 .tooltip-list {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
 }
 
 .tooltip-item {
-  display: flex;
-  justify-content: space-between;
-  height: 83px;
-  padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	height: 83px;
+	padding: 20px 0;
 }
 
 .tooltip-content {
-  width: 183px;
-  min-height: 43px;
-  display: flex;
-  align-items: center;
-  gap: 23px;
+	width: 183px;
+	min-height: 43px;
+	display: flex;
+	align-items: center;
+	gap: 23px;
 }
 
 .tooltip-img-wrapper {
-  display: flex;
+	display: flex;
 }
 
 .tooltip-btn-closed {
-  background: url('../img/icons/tooltip-toogle.svg') center no-repeat;
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+	background: url('../img/icons/tooltip-toogle.svg') center no-repeat;
+	width: 10px;
+	height: 10px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 .tooltip-price-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin-bottom: 20px;
-  min-height: 44px;
-  background-color: rgba(26, 26, 26, 1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	min-height: 44px;
+	background-color: rgba(26, 26, 26, 1);
 }
-
-
 
 .tooltip-btn {
-  background-color: var(--primary-color-white);
-  border: none;
-  cursor: pointer;
+	background-color: var(--primary-color-white);
+	border: none;
+	cursor: pointer;     /* width: 280px; */
+	height: 50px;
+	color: var(--primary-color-black);
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 21px;
+	letter-spacing: 0.2em;
+	text-align: center;
+	text-transform: uppercase;
+	align-self: center;
+	transition: var(--animation-hover);
 
-  /* width: 280px; */
-  height: 50px;
+	&:hover {
+		background-color: var(--additional-yellow);
+	}
 
-  color: var(--primary-color-black);
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-align: center;
-  text-transform: uppercase;
-  align-self: center;
+	&:active {
+    color: rgba(0, 0, 0, 0.3);;
 }
-/* .tooltip {
-  display: flex;
-  align-items: start;
-  margin-top: 10px;
-  position: relative;
-  margin-left: 10px;
-} */
 
+  &:focus-visible {
+		outline: 2px solid var(--additional-phiolet);
+		outline-offset: 2px;
+		transition: none;
+	}
 
-.tooltip-text,
-.tooltip-price-text {
-  color: var(--primary-color-white);
-  font-family: "Rubik", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0%;
-  margin: 0;
-  text-align: left;
+}
+
+.tooltip-text, .tooltip-price-text {
+	color: var(--primary-color-white);
+	font-family: "Rubik", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0%;
+	margin: 0;
+	text-align: left;
 }
 
 /* .tooltip-icon {
@@ -563,7 +572,6 @@ button {
   content: "";
   background-image: url("../images/icons/catalog-page-simbols/tooltiparrow.svg");
 } */
-
 .nav-link-auth-active {
 	display: none;
 }
@@ -1394,8 +1402,7 @@ button {
 /* form subscribe */
 .subscribe-form {
 	position: relative;
- /* display: none; */
-  display: block;
+	display: block;
 
 	&::after {
 		content: '';
@@ -1409,10 +1416,9 @@ button {
 
 }
 
-.subscribe-form-error {
-  position: relative;
-  display: none;
-  /* display: block; */
+/* .subscribe-form-error {
+	position: relative;
+	display: block;
 
 	&::after {
 		content: '';
@@ -1423,7 +1429,8 @@ button {
 		height: 3px;
 		background-color: var(--error-color-red);
 	}
-}
+
+} */
 
 .subscribe-form-field {
 	color: var(--primary-color-dark);
@@ -1435,19 +1442,19 @@ button {
 	width: 560px;
 	height: 55px;
 	padding: 0 50px 0 18px;
-  margin-right: -5px;
+	margin-right: -5px;
 	border: none;
 	outline: none;
 	background-color: transparent;
-  transition: var(--animation-hover);
+	transition: var(--animation-hover);
 
 	&::placeholder {
 		opacity: 0.5;
 	}
 
-  &:focus-visible {
-    background-color: var(--primary-color-grey);
-  }
+	&:focus-visible {
+		background-color: var(--primary-color-grey);
+	}
 
 }
 
@@ -1458,7 +1465,7 @@ button {
 	flex-wrap: wrap;
 }
 
-.btn-subscribe {
+.subscribe-btn {
 	width: 253px;
 	height: 57px;
 	border: 3px solid var(--primary-color-dark-grey);

@@ -57,7 +57,8 @@
                 </a>
               </li>
               <li class="nav-site-item">
-                <a class="nav-site-link nav-site-link-tooltip nav-link link-animation" href="#">
+                <a class="nav-site-link nav-site-link-tooltip nav-link link-animation" aria-describedby="tooltip-cart"
+                  href="#">
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"
@@ -68,7 +69,7 @@
                 </a>
 
                 <!--    Тултип      -->
-                <div class="tooltip-wrapper">
+                <div class="tooltip-wrapper" id="tooltip-cart">
                   <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 6.16675H0L7 0.166748L14 6.16675Z" fill="black" />
                   </svg>
@@ -651,14 +652,14 @@
             <form class="subscribe-form subscribe-form-error" action="#" method="get">
               <label class="subscribe-form-label" for="subscribe-form-element"></label>
               <input class="subscribe-form-field" type="text" placeholder="Ваш e-mail" aria-label="e-mail">
-              <button class="btn-subscribe btn-form" type="submit" aria-label="Подписаться">Подписаться</button>
+              <button class="subscribe-btn btn-form" type="submit" aria-label="Подписаться">Подписаться</button>
             </form>
-            <span class="subscribe-mark">Это бесплатно
-              <!-- <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.498 0L4.89805 9.3L0.498047 5V9.7L4.99805 14L14.498 4.7V0Z" fill="#08AF00" />
-              </svg> -->
-
-            </span>
+            <!-- <form class="subscribe-form-error" action="#" method="get">
+              <label class="subscribe-form-label" for="subscribe-form-element"></label>
+              <input class="subscribe-form-field" type="text" placeholder="ошибка" aria-label="e-mail">
+              <button class="subscribe-btn btn-form" type="submit" aria-label="Подписаться">Подписаться</button>
+            </form> -->
+            <span class="subscribe-mark">Это бесплатно</span>
           </div>
         </div>
       </section>
