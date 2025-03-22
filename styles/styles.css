@@ -409,11 +409,11 @@ button {
 
 /* tooltip   */
 
-/* .nav-site-link-tooltip:hover + .tooltip-wrapper,
+.nav-site-link-tooltip:hover + .tooltip-wrapper,
   .tooltip-wrapper:hover {
     display: flex;
     pointer-events: auto;
-  } */
+  }
 
 .tooltip-wrapper {
 	display: none;
@@ -424,7 +424,7 @@ button {
 	z-index: 10;
 	position: absolute;
 	right: 0;
-	pointer-events: auto;
+	/* pointer-events: auto; */
 
 	svg {
 		position: absolute;
