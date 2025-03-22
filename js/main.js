@@ -3,8 +3,6 @@ const listWrapper = document.querySelector(".header-catalog-list-wrapper");
 const isActiveServicesLinks = document.querySelectorAll(".header-content-services-link");
 const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
 
-const tabs = document.querySelectorAll('.services-tab-link');
-const contentItems = document.querySelectorAll('.services-content');
 
 const navUserLink = document.querySelector(".nav-user-link");
 const authUser = document.querySelector(".nav-link-auth");
@@ -13,7 +11,16 @@ const authActiveUser = document.querySelector(".nav-link-auth-active");
 const tooltipLink = document.querySelector('.nav-site-link-tooltip');
 const tooltip = document.getElementById('tooltip-cart');
 
-/*   ==========  tooltip-cart  ========= */
+const tabs = document.querySelectorAll('.services-tab-link');
+const contentItems = document.querySelectorAll('.services-content');
+
+const subscribeForm = document.getElementById('subscribe-form');
+const subscribeFormField = document.getElementById('user-email');
+const formError = document.querySelector('.subscribe-form-error');
+
+
+
+/*   ==============  tooltip-cart  ============== */
 const tooltipShow = () => {
 
   // Показываем/скрываем тултип при клике на ссылку
@@ -37,7 +44,7 @@ const tooltipShow = () => {
 
 tooltipShow();
 
-//  =============   services tabs
+/*  ==============   services tabs  ==============  */
 const toggleTabs = () => {
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', (evt) => {
@@ -56,7 +63,7 @@ const toggleTabs = () => {
 }
 toggleTabs();
 
-/*   ==========   Вход/выход аккаунта   ========= */
+/* ==============   Вход/выход аккаунта   ============== */
 const navUserShow = () => {
 
   navUserLink.addEventListener('click', (evt) => {
@@ -74,7 +81,7 @@ const navUserShow = () => {
 
 navUserShow();
 
-//  =================  Показать список товаров каталога
+/*  ==============  Показать список товаров каталога  ==============  */
 const dropdownShow = () => {
   btnDropdown.addEventListener("click", () => {
     btnDropdown.classList.toggle("is-active");
@@ -90,7 +97,7 @@ const dropdownShow = () => {
 
 dropdownShow();
 
-//  ============  Инициализация слайдера
+/*  ==============  Инициализация слайдера  ==============  */
 const initHeroSlider = () => {
 
   new Swiper('.swiper-container', {
@@ -112,7 +119,7 @@ const initHeroSlider = () => {
 
 initHeroSlider();
 
-// ===============   Показать активный services элемент
+/* ============== Показать активный services элемент  ==============  */
 const servicesShow = () => {
   isActiveServicesLinks.forEach((link) => {
     link.addEventListener('click', (evt) => {
@@ -127,7 +134,7 @@ const servicesShow = () => {
 
 servicesShow();
 
-// ============= Показать активный элемент в каталоге товаров
+/* ============== Показать активный элемент в каталоге товаров ============== */
 const catalogProductsShow = () => {
   showCatalogLinks.forEach((link) => {
     link.addEventListener('click', (evt) => {
@@ -141,3 +148,21 @@ const catalogProductsShow = () => {
 }
 
 catalogProductsShow();
+
+/* ==============   subscribe-form   ============== */
+const subscribeFormValidate = () => {
+
+  subscribeForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+
+    if (subscribeFormField.value.trim() === '') {
+      // Если поле пустое, меняем плейсхолдер и показываем ошибку
+      subscribeFormField.placeholder = "ошибка";
+      subscribeFormField.classList.add('subscribe-form-error'); // Добавляем класс для стилизации
+    } else {
+      subscribeFormField.classList.remove('subscribe-form-error'); // Убираем класс ошибки
+    }
+  });
+}
+
+subscribeFormValidate();
