@@ -1,23 +1,23 @@
-const btnDropdown = document.querySelector(".header-catalog-btn");
-const listWrapper = document.querySelector(".header-catalog-list-wrapper");
-const isActiveServicesLinks = document.querySelectorAll(".header-content-services-link");
+// активный элемент в каталоге товаров в header
 const showCatalogLinks = document.querySelectorAll(".header-catalog-link");
-
-
+// активный элемент услуг в header
+const isActiveServicesHeaderLinks = document.querySelectorAll(".header-content-services-link");
+// имитация входа/выхода пользователя
 const navUserLink = document.querySelector(".nav-user-link");
 const authUser = document.querySelector(".nav-link-auth");
 const authActiveUser = document.querySelector(".nav-link-auth-active");
-
+// показать тултип в корзине товаров
 const tooltipLink = document.querySelector('.nav-site-link-tooltip');
 const tooltip = document.getElementById('tooltip-cart');
-
+// табы с услугами
 const tabs = document.querySelectorAll('.services-tab-link');
 const contentItems = document.querySelectorAll('.services-content');
-
+// валидация формы для отправки
 const subscribeForm = document.getElementById('subscribe-form');
 const subscribeFormField = document.getElementById('user-email');
 const formError = document.querySelector('.subscribe-form-error');
-
+// активный элемент услуг в footer
+const isActiveServicesFooterLinks = document.querySelectorAll(".footer-services-link");
 
 
 /*   ==============  tooltip-cart  ============== */
@@ -81,22 +81,6 @@ const navUserShow = () => {
 
 navUserShow();
 
-/*  ==============  Показать список товаров каталога  ==============  */
-const dropdownShow = () => {
-  btnDropdown.addEventListener("click", () => {
-    btnDropdown.classList.toggle("is-active");
-    if (btnDropdown.classList.contains("is-active")) {
-      listWrapper.classList.remove('closed')
-      listWrapper.classList.add('opened')
-    } else {
-      listWrapper.classList.add('closed')
-      listWrapper.classList.remove('opened')
-    }
-  });
-}
-
-dropdownShow();
-
 /*  ==============  Инициализация слайдера  ==============  */
 const initHeroSlider = () => {
 
@@ -119,12 +103,12 @@ const initHeroSlider = () => {
 
 initHeroSlider();
 
-/* ============== Показать активный services элемент  ==============  */
-const servicesShow = () => {
-  isActiveServicesLinks.forEach((link) => {
+/* ============== Показать активный services элемент в header  ==============  */
+const showActiveServicesHeaderElement = () => {
+  isActiveServicesHeaderLinks.forEach((link) => {
     link.addEventListener('click', (evt) => {
       evt.preventDefault();
-      isActiveServicesLinks.forEach((el) => {
+      isActiveServicesHeaderLinks.forEach((el) => {
         el.classList.remove('is-active');
       });
       link.classList.add('is-active');
@@ -132,7 +116,7 @@ const servicesShow = () => {
   });
 }
 
-servicesShow();
+showActiveServicesHeaderElement();
 
 /* ============== Показать активный элемент в каталоге товаров ============== */
 const catalogProductsShow = () => {
@@ -149,7 +133,23 @@ const catalogProductsShow = () => {
 
 catalogProductsShow();
 
-/* ==============   subscribe-form   ============== */
+
+/* ==============   Показать активный элемент услуг в footer   ============== */
+const showActiveServicesFooterElement = () => {
+  isActiveServicesFooterLinks.forEach((link) => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      isActiveServicesFooterLinks.forEach((el) => {
+        el.classList.remove('is-active')
+      })
+      link.classList.add('is-active')
+    })
+  })
+}
+
+showActiveServicesFooterElement();
+
+/* ============== Валидация формы subscribe-form   ============== */
 const subscribeFormValidate = () => {
 
   subscribeForm.addEventListener('submit', function (evt) {
