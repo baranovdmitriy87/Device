@@ -57,8 +57,7 @@
                 </a>
               </li>
               <li class="nav-site-item">
-                <a class="nav-site-link nav-site-link-tooltip link-animation" aria-describedby="tooltip-cart"
-                  href="#">
+                <a class="nav-site-link nav-site-link-tooltip link-animation" aria-describedby="tooltip-cart" href="#">
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"
@@ -639,7 +638,7 @@
             <span>пн—пт: с 10:00 до 22:00</span>
             <span>сб—вс: с 10:00 до 19:00</span>
 
-            <a class="contacts-btn btn" href="#">Напишите нам</a>
+            <a class="contacts-btn btn" id="modal-open-btn" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -772,8 +771,49 @@
         </section>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <section class="modal modal-opened modal-hidden">
+      <h2>Доставка под заказ</h2>
+
+      <form class="form-modal" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form-field-container">
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-name">Ваше имя:</label>
+            <input class="form-field" id="user-name" type="text" name="name" placeholder="Введите имя">
+            <span>Добавьте имя</span>
+          </div>
+
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-email">Ваш e-mail:</label>
+            <input class="form-field" id="user-email" type="email" name="email" placeholder="Ваш e-mail">
+          </div>
+        </div>
+
+        <div class="form-field-container">
+          <div class="form-field-wrapper">
+            <label class="form-label" for="user-email">Что нужно привезти:</label>
+            <input class="form-field" id="user-email" type="email" name="email" placeholder="В свободной форме">
+          </div>
+          <div class="form-field-wrapper form-quentity-wrapper">
+            <label class="form-label" for="user-email">Количество:</label>
+            <button class="form-quentity-minus link-animation" type="button"></button>
+            <input class="form-field form-quentity-field" type="number" id="auth-form__adults" value="1" name="adults">
+            <button class="form-quentity-plus link-animation" type="button"></button>
+          </div>
+        </div>
+        <button class="btn form-send-btn" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close-btn link-animation" id="modal-close-btn" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+
+    <!-- overlay -->
+     <div class="overlay"></div>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
   </body>
 
 </html>

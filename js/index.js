@@ -18,6 +18,13 @@ const subscribeFormField = document.getElementById('user-email');
 const formError = document.querySelector('.subscribe-form-error');
 // активный элемент услуг в footer
 const isActiveServicesFooterLinks = document.querySelectorAll(".footer-services-link");
+// открытие модального окна
+const modal = document.querySelector(".modal");
+const openModalBtn = document.getElementById("modal-open-btn");
+const closeModalBtn = document.getElementById("modal-close-btn");
+// overlay
+const overlay = document.querySelector('.overlay');
+
 
 
 /*   ==============  tooltip-cart  ============== */
@@ -149,6 +156,7 @@ const showActiveServicesFooterElement = () => {
 
 showActiveServicesFooterElement();
 
+
 /* ============== Валидация формы subscribe-form   ============== */
 const subscribeFormValidate = () => {
 
@@ -166,3 +174,39 @@ const subscribeFormValidate = () => {
 }
 
 subscribeFormValidate();
+
+/*   ==============  Modal Window  ============== */
+
+const showModalContacts = () => {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      modal.classList.add('modal-hidden');
+    }
+    overlay.classList.remove('is-active')
+
+  });
+
+  // открытие модального окна
+
+  openModalBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (openModalBtn) {
+      modal.classList.remove('modal-hidden')
+      overlay.classList.add('is-active')
+    }
+  });
+
+  // закрытие модального окна по кнопке
+  closeModalBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (closeModalBtn) {
+      modal.classList.add('modal-hidden')
+    }
+    overlay.classList.remove('is-active')
+
+  });
+}
+
+
+
+showModalContacts();

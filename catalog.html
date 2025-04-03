@@ -4,7 +4,6 @@
   <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="description" content="Интернет-магазин инновационных товаров и гаджетов Device">
     <title>Интернет-магазин инновационных товаров и гаджетов Device</title>
@@ -171,7 +170,23 @@
     </header>
 
     <!-- main -->
-
+    <div class="range-slider">
+      <input type="range" min="0" max="8000" value="10" class="slider slider-1" id="slider-1">
+      <input type="range" min="0" max="8000" value="5000" class="slider" id="slider-2">
+      <div class="track" id="track"></div>
+      <div class="slider-values">
+        <div class="slider-values-from">
+          <span>от</span>
+          <input class=" link-animation" id="value-1" type="number" name="query" placeholder="0" aria-label="от 0" />
+          <!-- <span id="value-1">0</span> -->
+        </div>
+        <div class="slider-values-unto">
+          <span>до</span>
+          <input class=" link-animation" id="value-2" type="number" name="query" placeholder="5000" aria-label="до 5000" />
+          <!-- <span id="value-2">5000</span> -->
+        </div>
+      </div>
+  </div>
     <!-- footer -->
     <footer class="footer">
       <div class="footer-container container">
@@ -278,8 +293,7 @@
         </section>
       </div>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
   </body>
 
 </html>
