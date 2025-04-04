@@ -22,6 +22,7 @@ const isActiveServicesFooterLinks = document.querySelectorAll(".footer-services-
 const modal = document.querySelector(".modal");
 const openModalBtn = document.getElementById("modal-open-btn");
 const closeModalBtn = document.getElementById("modal-close-btn");
+userName = document.getElementById("user-name")
 // overlay
 const overlay = document.querySelector('.overlay');
 
@@ -181,6 +182,7 @@ const showModalContacts = () => {
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
       modal.classList.add('modal-hidden');
+
     }
     overlay.classList.remove('is-active')
 
@@ -192,6 +194,7 @@ const showModalContacts = () => {
     evt.preventDefault();
     if (openModalBtn) {
       modal.classList.remove('modal-hidden')
+      userName.focus()
       overlay.classList.add('is-active')
     }
   });

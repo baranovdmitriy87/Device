@@ -773,55 +773,62 @@
     </footer>
 
     <!-- Modal -->
-    <section class="modal modal-opened modal-hidden">
-      <h2>Доставка под заказ</h2>
 
-      <form class="form-modal" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-field-container">
-          <div class="form-field-wrapper">
-            <label class="form-label" for="user-name">Ваше имя:</label>
-            <input class="form-field" id="user-name" type="text" name="name" placeholder="Введите имя">
-            <span class="form-field-subinfo">Добавьте имя</span>
+    <div class="modal modal-opened modal-hidden">
+      <section class="modal-section">
+        <h2>Доставка под заказ</h2>
+
+        <form class="form-modal" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-field-container">
+            <div class="form-field-wrapper">
+              <label class="form-label" for="user-name">Ваше имя:</label>
+              <input class="form-field" id="user-name" type="text" name="name" placeholder="Введите имя">
+              <span class="form-field-subinfo">Добавьте имя</span>
+            </div>
+
+            <div class="form-field-wrapper">
+              <label class="form-label" for="user-email">Ваш e-mail:</label>
+              <input class="form-field" id="user-email" type="email" name="email" placeholder="Ваш e-mail">
+              <span class="form-field-subinfo">Добавьте e-mail</span>
+
+            </div>
           </div>
 
-          <div class="form-field-wrapper">
-            <label class="form-label" for="user-email">Ваш e-mail:</label>
-            <input class="form-field" id="user-email" type="email" name="email" placeholder="Ваш e-mail">
-            <span class="form-field-subinfo">Добавьте e-mail</span>
+          <div class="form-field-container">
+            <div class="form-field-wrapper">
+              <label class="form-label" for="user-email">Что нужно привезти:</label>
+              <input class="form-field" id="user-email" type="email" name="email" placeholder="В свободной форме">
+            </div>
 
-          </div>
-        </div>
+            <div class="form-field-wrapper form-quentity-wrapper">
+              <label class="form-label form-label-quentity" for="user-email">Количество:
 
-        <div class="form-field-container">
-          <div class="form-field-wrapper">
-            <label class="form-label" for="user-email">Что нужно привезти:</label>
-            <input class="form-field" id="user-email" type="email" name="email" placeholder="В свободной форме">
-          </div>
-
-          <div class="form-field-wrapper form-quentity-wrapper">
-            <label class="form-label form-label-quentity" for="user-email">Количество:
-
-              <!--    Тултип      -->
-              <span class="tooltip">
-                <button class="tooltip-toggle tooltip-icon" type="button" aria-labelledby="tooltip-label-date">
-                </button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно.
-                  Привезём сколько получится по требованиям
-                  к провозу багажа.
+                <!--    Тултип      -->
+                <span class="tooltip">
+                  <button class="tooltip-toggle tooltip-icon" type="button" aria-labelledby="tooltip-label-date">
+                  </button>
+                  <!-- <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6.16675H0L7 0.166748L14 6.16675Z" fill="black" />
+                  </svg> -->
+                  <span class="tooltip-modal-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно.
+                    Привезём сколько получится по требованиям
+                    к провозу багажа.
+                  </span>
                 </span>
-              </span>
-            </label>
-            <button class="form-quentity-minus link-animation" type="button"></button>
-            <input class="form-field form-quentity-field" type="number" id="auth-form__adults" value="1" name="adults">
-            <button class="form-quentity-plus link-animation" type="button"></button>
+              </label>
+              <button class="form-quentity-minus link-animation" type="button"></button>
+              <input class="form-field form-quentity-field" type="number" id="auth-form__adults" value="1"
+                name="adults">
+              <button class="form-quentity-plus link-animation" type="button"></button>
+            </div>
           </div>
-        </div>
-        <button class="btn form-send-btn" type="submit">Отправить</button>
-      </form>
-      <button class="modal-close-btn link-animation" id="modal-close-btn" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-    </section>
+          <button class="btn form-send-btn" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close-btn link-animation" id="modal-close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </section>
+    </div>
 
     <!-- overlay -->
     <div class="overlay"></div>
