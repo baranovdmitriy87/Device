@@ -781,12 +781,14 @@
           <div class="form-field-wrapper">
             <label class="form-label" for="user-name">Ваше имя:</label>
             <input class="form-field" id="user-name" type="text" name="name" placeholder="Введите имя">
-            <span>Добавьте имя</span>
+            <span class="form-field-subinfo">Добавьте имя</span>
           </div>
 
           <div class="form-field-wrapper">
             <label class="form-label" for="user-email">Ваш e-mail:</label>
             <input class="form-field" id="user-email" type="email" name="email" placeholder="Ваш e-mail">
+            <span class="form-field-subinfo">Добавьте e-mail</span>
+
           </div>
         </div>
 
@@ -795,8 +797,20 @@
             <label class="form-label" for="user-email">Что нужно привезти:</label>
             <input class="form-field" id="user-email" type="email" name="email" placeholder="В свободной форме">
           </div>
+
           <div class="form-field-wrapper form-quentity-wrapper">
-            <label class="form-label" for="user-email">Количество:</label>
+            <label class="form-label form-label-quentity" for="user-email">Количество:
+
+              <!--    Тултип      -->
+              <span class="tooltip">
+                <button class="tooltip-toggle tooltip-icon" type="button" aria-labelledby="tooltip-label-date">
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно.
+                  Привезём сколько получится по требованиям
+                  к провозу багажа.
+                </span>
+              </span>
+            </label>
             <button class="form-quentity-minus link-animation" type="button"></button>
             <input class="form-field form-quentity-field" type="number" id="auth-form__adults" value="1" name="adults">
             <button class="form-quentity-plus link-animation" type="button"></button>
@@ -810,7 +824,7 @@
     </section>
 
     <!-- overlay -->
-     <div class="overlay"></div>
+    <div class="overlay"></div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
