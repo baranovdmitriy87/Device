@@ -19,10 +19,10 @@ const formError = document.querySelector('.subscribe-form-error');
 // активный элемент услуг в footer
 const isActiveServicesFooterLinks = document.querySelectorAll(".footer-services-link");
 // открытие модального окна
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-container");
 const openModalBtn = document.getElementById("modal-open-btn");
 const closeModalBtn = document.getElementById("modal-close-btn");
-userName = document.getElementById("user-name")
+const userName = document.getElementById("modal-user-name")
 // overlay
 const overlay = document.querySelector('.overlay');
 
@@ -181,21 +181,16 @@ subscribeFormValidate();
 const showModalContacts = () => {
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
-      modal.classList.add('modal-hidden');
-
+      modal.classList.add('modal-container-close');
     }
-    overlay.classList.remove('is-active')
-
   });
 
   // открытие модального окна
-
   openModalBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     if (openModalBtn) {
-      modal.classList.remove('modal-hidden')
-      userName.focus()
-      overlay.classList.add('is-active')
+      modal.classList.remove('modal-container-close');
+      userName.focus();
     }
   });
 
@@ -203,13 +198,9 @@ const showModalContacts = () => {
   closeModalBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     if (closeModalBtn) {
-      modal.classList.add('modal-hidden')
+      modal.classList.add('modal-container-close');
     }
-    overlay.classList.remove('is-active')
-
   });
 }
-
-
 
 showModalContacts();

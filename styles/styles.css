@@ -95,16 +95,15 @@ a {
 
 /*  Для браузера Firefox */
 input[type="number"] {
-  -webkit-appearance: textfield;
-  appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
 }
 
 /*   Для других браузеров */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
 }
 
 /* ======  buttons  ====== */
@@ -396,8 +395,7 @@ button {
 	font-weight: 400;
 	line-height: 30px;
 	color: var(--primary-color-black);
-	position: relative;
-	/* padding: 12px 0; */
+	position: relative;     /* padding: 12px 0; */
 	padding: 4px 0;
 
 	.nav-link-name {
@@ -408,8 +406,7 @@ button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: absolute;
-		/* top: 12px; */
+		position: absolute;         /* top: 12px; */
 		top: 6px;
 		left: -14px;
 		font-size: 14px;
@@ -1360,14 +1357,14 @@ button {
 .subscribe-form {
 	position: relative;
 	display: block;     /* &::after {
-						content: '';
-						position: absolute;
-						bottom: 0;
-						right: 0;
-						width: 100%;
-						height: 3px;
-						background-color: var(--primary-color-dark-grey);
-					} */
+								content: '';
+								position: absolute;
+								bottom: 0;
+								right: 0;
+								width: 100%;
+								height: 3px;
+								background-color: var(--primary-color-dark-grey);
+							} */
 }
 
 /* .subscribe-form-error {
@@ -1682,70 +1679,35 @@ button {
 	pointer-events: none;
 }
 
-/*  ==============  overlay   ============== */
-.overlay {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #F0F0F0E6;
-  z-index: 100;
-}
-
-.overlay.is-active {
-	display: block;
-	z-index: 100;
-}
 
 /*  ==============  Modal   ============== */
 .modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(240, 240, 240, 0.902);
+}
+
+.modal-container-close {
+	display: none;
 }
 
 .modal {
-  background: #F0F0F0E6;
+	background: rgba(240, 240, 240, 0.902);
 	display: block;
-	margin: 0 auto;
 	padding: 63px 71px;
 	width: 920px;
 	height: 568px;
 	border: 10px solid var(--primary-color-black);
-	box-sizing: border-box;
 	box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);
 	background: var(--primary-color-white);
 	transform: translate(-50%, -50%);
-	position: relative;
 
-	h2 {
-		margin: 0;
-		color: var(--primary-color-black);
-		font-family: "Raleway", sans-serif;
-		font-size: 50px;
-		font-weight: 800;
-		line-height: 50px;
-		margin-bottom: 42px;
-	}
-
-}
-
-.modal-hidden {
-	display: none;
-}
-
-.modal-close-btn {
-	width: 26px;
-	height: 26px;
-	border: none;
-	cursor: pointer;
-	background: url('../img/icons/modal-close-btn.svg') center no-repeat;
-	position: absolute;
-	top: 74px;
-	right: 70px;
-}
-
-.modal-opened {
-	-webkit-animation-name: appearanceModal;
+  -webkit-animation-name: appearanceModal;
 	-webkit-animation-duration: 0.5s;
 	animation-name: appearanceModal;
 	animation-duration: 0.5s;
@@ -1755,10 +1717,7 @@ button {
 	z-index: 200;
 }
 
-.modal-container {
-  margin: 0 auto;
-}
-
+/* Плавное появление модального окна */
 @keyframes appearanceModal {
 	0% {
 		-webkit-transform: translate(-50%, 100%);
@@ -1781,11 +1740,47 @@ button {
 		-webkit-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	}
+}
 
+.modal h2 {
+  margin: 0;
+  color: var(--primary-color-black);
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  margin-bottom: 42px;
 }
 
 
-.form-field-container {
+.modal-title {
+	width: 560px;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #000;
+	margin-bottom: 64px;
+	margin-top: 0;
+}
+
+.modal-content {
+	position: relative;
+}
+
+.modal-close-btn {
+	width: 26px;
+	height: 26px;
+	border: none;
+	cursor: pointer;
+	background: url('../img/icons/modal-close-btn.svg') center no-repeat;
+	position: absolute;
+	top: 74px;
+	right: 70px;
+}
+
+ .form-field-container {
 	display: flex;
   justify-content: space-between;
   margin-bottom: 42px;
@@ -1797,7 +1792,7 @@ button {
   flex-direction: column;
 }
 
-.form-field-subinfo {
+.form-field-info {
   color: var(--primary-color-black);
   font-family: "Rubik", sans-serif;
   font-size: 14px;
@@ -1805,6 +1800,15 @@ button {
   line-height: 20px;
   display: block;
 }
+
+.form-field.error {
+  border: 2px solid var(--error-color-red);
+}
+
+.form-field-info.error {
+  color: var(--error-color-red);
+}
+
 
 .form-quentity-wrapper {
 position: relative;
@@ -1836,71 +1840,69 @@ background: url('../img/icons/plus.svg') center no-repeat;
 
 /*  tooltip  */
 .tooltip-toggle:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 .tooltip-toggle:active {
-  display: block;
+	display: block;
 }
 
 .tooltip-toggle:disabled {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.3;
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.3;
 }
 
-/*  tooltip  */
-.tooltip-modal-wrapper {
-  display: flex;
-  margin-left: 7px;
-}
+/* .tooltip-modal-wrapper {
+	display: flex;
+	margin-left: 7px;
+} */
 
 .tooltip {
-  display: flex;
-  align-items: start;
-  margin-top: -4px;
-  position: relative;
-  margin-left: 9px;
+	display: flex;
+	align-items: start;
+	margin-top: -4px;
+	position: relative;
+	margin-left: 9px;
 }
 
 .tooltip-icon {
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background-color: var(--additional-yellow);
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	background-color: var(--additional-yellow);
 }
 
 .tooltip-toggle {
-  padding: 0;
-  border: none;
-  background-image: url("../img/icons/icon-tooltip.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+	padding: 0;
+	border: none;
+	background-image: url("../img/icons/icon-tooltip.svg");
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .tooltip-modal-text {
-  position: absolute;
-  min-width: 200px;
-  top: 40px;
-  left: -145px;
-  background-color: var(--primary-color-black);
-  color: var(--primary-color-white);
-  text-transform: none;
-  padding: 19px;
-  /* padding: 22px 11px 23px 23px; */
-  font-family: "Rubik",sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+	position: absolute;
+	min-width: 200px;
+	top: 40px;
+	left: -145px;
+	background-color: var(--primary-color-black);
+	color: var(--primary-color-white);
+	text-transform: none;
+	padding: 19px;
+	font-family: "Rubik", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
 	box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);
-  z-index: 500;
-  display: none;
+	z-index: 500;
+	display: none;
 }
 
-.tooltip-toggle:hover + .tooltip-modal-text,
-.tooltip-toggle:focus + .tooltip-modal-text {
-  display: block;
+.tooltip-toggle:hover + .tooltip-modal-text, .tooltip-toggle:focus + .tooltip-modal-text {
+	display: block;
 }
+
 
 .tooltip-modal-text::after {
   width: 19px;
@@ -1924,16 +1926,15 @@ background: url('../img/icons/plus.svg') center no-repeat;
 	letter-spacing: -0.3px;
 	text-align: left;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   margin-bottom: 14px;
 }
 
 .form-label-quentity {
-  margin-bottom: 10px;
-
+	margin-bottom: 10px;
 }
 
-.form-field {
+ .form-field {
 	width: 360px;
 	height: 60px;
 	padding: 20px;
@@ -1964,7 +1965,7 @@ background: url('../img/icons/plus.svg') center no-repeat;
   padding: 15px 50px;
 }
 
-.form-send-btn {
+ .form-send-btn {
   text-align: center;
   width: 200px;
   height: 40px;

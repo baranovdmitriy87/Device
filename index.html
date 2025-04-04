@@ -774,22 +774,27 @@
 
     <!-- Modal -->
 
-    <div class="modal modal-opened modal-hidden">
-      <section class="modal-section">
+    <div class="modal-container modal-container-close modal-container-opened">
+      <section class="modal">
+        <button class="modal-close-btn link-animation" id="modal-close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
         <h2>Доставка под заказ</h2>
 
         <form class="form-modal" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-field-container">
             <div class="form-field-wrapper">
               <label class="form-label" for="user-name">Ваше имя:</label>
-              <input class="form-field" id="user-name" type="text" name="name" placeholder="Введите имя">
-              <span class="form-field-subinfo">Добавьте имя</span>
+              <input class="form-field" id="modal-user-name" type="text" name="name" placeholder="Введите имя">
+              <span class="form-field-info">Добавьте имя</span>
+              <!-- <span class="form-field-info error">Забавное у вас имя</span> -->
             </div>
 
             <div class="form-field-wrapper">
               <label class="form-label" for="user-email">Ваш e-mail:</label>
-              <input class="form-field" id="user-email" type="email" name="email" placeholder="Ваш e-mail">
-              <span class="form-field-subinfo">Добавьте e-mail</span>
+              <input class="form-field" id="modal-user-email" type="email" name="email" placeholder="Ваш e-mail">
+              <span class="form-field-info">Добавьте e-mail</span>
+              <!-- <span class="form-field-info error">Забавный у вас адрес</span> -->
 
             </div>
           </div>
@@ -803,14 +808,12 @@
             <div class="form-field-wrapper form-quentity-wrapper">
               <label class="form-label form-label-quentity" for="user-email">Количество:
 
-                <!--    Тултип      -->
+                <!-- Тултип -->
                 <span class="tooltip">
                   <button class="tooltip-toggle tooltip-icon" type="button" aria-labelledby="tooltip-label-date">
                   </button>
-                  <!-- <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 6.16675H0L7 0.166748L14 6.16675Z" fill="black" />
-                  </svg> -->
-                  <span class="tooltip-modal-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно.
+                  <span class="tooltip-modal-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько
+                    нужно.
                     Привезём сколько получится по требованиям
                     к провозу багажа.
                   </span>
@@ -824,14 +827,9 @@
           </div>
           <button class="btn form-send-btn" type="submit">Отправить</button>
         </form>
-        <button class="modal-close-btn link-animation" id="modal-close-btn" type="button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
+
       </section>
     </div>
-
-    <!-- overlay -->
-    <div class="overlay"></div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
