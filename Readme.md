@@ -4,9 +4,6 @@
 
 #### Полностью реализована верстка главной страницы сайта и модальное окно с приминением js для некоторых компонентов.
 
-*  [МАКЕТ](https://www.figma.com/design/GLlcDqnmpzr82PtaPLHcIZ/HTML-2-%2F-%D0%9A%D1%8D%D1%82-%D1%8D%D0%BD%D0%B5%D1%80%D0%B4%D0%B6%D0%B8-(29)?node-id=0-1&p=f&t=tqPdDGNm7GjtknNZ-0)
-* [ОБЗОР ПРОЕКТА](https://baranovdmitriy87.github.io/2324921-cat-energy-1/build/)
-
 [МАКЕТ](https://www.figma.com/design/U1wH2IKuSxq2VdnXu7IeJ5/HTML-1-%2F-%D0%94%D0%B5%D0%B2%D0%B0%D0%B9%D1%81-(36)?node-id=0-1&p=f&t=ZILq6E6mzOMEdvYr-0)
 
 [ОБЗОР ПРОЕКТА](https://baranovdmitriy87.github.io/Device/)
