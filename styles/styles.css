@@ -957,6 +957,7 @@ button {
 
 /*    ========  services  ========= */
 .services {
+  overflow: hidden;
 	position: relative;
 
 	&::after {

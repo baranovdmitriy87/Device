@@ -22,11 +22,11 @@ const isActiveServicesFooterLinks = document.querySelectorAll(".footer-services-
 const modal = document.querySelector(".modal-container");
 const openModalBtn = document.getElementById("modal-open-btn");
 const closeModalBtn = document.getElementById("modal-close-btn");
+const userName = document.getElementById('name');
 // валидация формы модального окна
 const form = document.getElementById('myForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
-// const elementsToHide = document.querySelectorAll('.form-field-info');
 const formFieldName = document.querySelector('.form-field-info-name');
 const formFieldMail = document.querySelector('.form-field-info-mail');
 
