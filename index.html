@@ -781,19 +781,21 @@
         </button>
         <h2>Доставка под заказ</h2>
 
-        <form class="form-modal" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form-modal" id="myForm" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-field-container">
             <div class="form-field-wrapper">
               <label class="form-label" for="user-name">Ваше имя:</label>
-              <input class="form-field" id="modal-user-name" type="text" name="name" placeholder="Введите имя">
-              <span class="form-field-info">Добавьте имя</span>
+              <input class="form-field" id="name" type="text" name="name" placeholder="Введите имя">
+              <span class="form-field-info form-field-info-name" id="info">Добавьте имя</span>
+              <span class="error-message"></span>
               <!-- <span class="form-field-info error">Забавное у вас имя</span> -->
             </div>
 
             <div class="form-field-wrapper">
               <label class="form-label" for="user-email">Ваш e-mail:</label>
-              <input class="form-field" id="modal-user-email" type="email" name="email" placeholder="Ваш e-mail">
-              <span class="form-field-info">Добавьте e-mail</span>
+              <input class="form-field" id="email" type="email" name="email" placeholder="Ваш e-mail">
+              <span class="form-field-info form-field-info-mail" id="info">Добавьте e-mail</span>
+              <span class="error-message"></span>
               <!-- <span class="form-field-info error">Забавный у вас адрес</span> -->
 
             </div>
@@ -801,12 +803,12 @@
 
           <div class="form-field-container">
             <div class="form-field-wrapper">
-              <label class="form-label" for="user-email">Что нужно привезти:</label>
-              <input class="form-field" id="user-email" type="email" name="email" placeholder="В свободной форме">
+              <label class="form-label" for="user-delivery">Что нужно привезти:</label>
+              <input class="form-field" type="text" name="delivery" placeholder="В свободной форме">
             </div>
 
             <div class="form-field-wrapper form-quentity-wrapper">
-              <label class="form-label form-label-quentity" for="user-email">Количество:
+              <label class="form-label form-label-quentity" for="user-adults">Количество:
 
                 <!-- Тултип -->
                 <span class="tooltip">
@@ -820,7 +822,7 @@
                 </span>
               </label>
               <button class="form-quentity-minus link-animation" type="button"></button>
-              <input class="form-field form-quentity-field" type="number" id="auth-form__adults" value="1"
+              <input class="form-field form-quentity-field" type="number" id="auth-form-adults" value="1"
                 name="adults">
               <button class="form-quentity-plus link-animation" type="button"></button>
             </div>

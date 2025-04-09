@@ -22,10 +22,13 @@ const isActiveServicesFooterLinks = document.querySelectorAll(".footer-services-
 const modal = document.querySelector(".modal-container");
 const openModalBtn = document.getElementById("modal-open-btn");
 const closeModalBtn = document.getElementById("modal-close-btn");
-const userName = document.getElementById("modal-user-name")
-// overlay
-const overlay = document.querySelector('.overlay');
-
+// валидация формы модального окна
+const form = document.getElementById('myForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+// const elementsToHide = document.querySelectorAll('.form-field-info');
+const formFieldName = document.querySelector('.form-field-info-name');
+const formFieldMail = document.querySelector('.form-field-info-mail');
 
 
 /*   ==============  tooltip-cart  ============== */
@@ -204,3 +207,74 @@ const showModalContacts = () => {
 }
 
 showModalContacts();
+
+
+/* ============== Валидация формы modal   ============== */
+function showError(input, message) {
+  const formGroup = input.parentElement;
+  formGroup.classList.remove('success');
+  formGroup.classList.add('error');
+  const errorMessage = formGroup.querySelector('.error-message');
+  errorMessage.textContent = message;
+}
+
+function showSuccess(input) {
+  const formGroup = input.parentElement;
+  formGroup.classList.remove('error');
+  formGroup.classList.add('success');
+  const errorMessage = formGroup.querySelector('.error-message');
+  errorMessage.textContent = '';
+}
+
+function validateName() {
+  const value = nameInput.value.trim();
+  if (value === '') {
+    formFieldName.style.display = "none"
+    showError(nameInput, 'Имя обязательно для заполнения');
+    return false;
+  } else if (value.length < 2) {
+    formFieldName.style.display = "none"
+    showError(nameInput, 'Имя должно быть не короче 2 символов');
+    return false;
+  } else {
+    formFieldName.style.display = "block"
+    showSuccess(nameInput);
+    return true;
+  }
+}
+
+function validateEmail() {
+  const value = emailInput.value.trim();
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (value === '') {
+    formFieldMail.style.display = "none"
+    showError(emailInput, 'Email обязателен для заполнения');
+    return false;
+  } else if (!re.test(value)) {
+    formFieldMail.style.display = "none"
+    showError(emailInput, 'Забавный у вас адрес');
+    return false;
+  } else {
+    formFieldMail.style.display = "block"
+    showSuccess(emailInput);
+    return true;
+  }
+}
+
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const isNameValid = validateName();
+  const isEmailValid = validateEmail();
+
+  if (isNameValid && isEmailValid) {
+    // Форма валидна, можно отправлять данные
+    form.reset();
+    alert('Форма успешно отправлена!');
+  }
+});
+
+// Валидация при вводе
+nameInput.addEventListener('input', validateName);
+emailInput.addEventListener('input', validateEmail);

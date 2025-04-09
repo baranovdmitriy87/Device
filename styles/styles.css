@@ -16,7 +16,7 @@
 	--additional-phiolet: #af4fff;     /* Дополнительный фиолетовый */
 	--error-color-red: #ff3d3d;     /* Статус ошибка hover */
 	--error-color-orange: #fd912e;     /* Статус предупреждение  */
-	--error-color-green: #08af00;     /* Статус успех  */
+	--success-color-green: #08af00;     /* Статус успех  */
 	--animation-hover: all 0.2s ease-in-out;
 }
 
@@ -1787,12 +1787,14 @@ button {
 }
 
 .form-field-wrapper {
+  position: relative;
 
   display: flex;
   flex-direction: column;
 }
 
-.form-field-info {
+.form-field-info,
+.error-message {
   color: var(--primary-color-black);
   font-family: "Rubik", sans-serif;
   font-size: 14px;
@@ -1801,12 +1803,22 @@ button {
   display: block;
 }
 
-.form-field.error {
+/* Валидация  */
+.error input {
   border: 2px solid var(--error-color-red);
 }
 
-.form-field-info.error {
+.success input {
+  border: 2px solid var(--success-color-green);
+}
+
+.error-message {
   color: var(--error-color-red);
+  height: 1em;
+  position: absolute;
+  bottom: 6px;
+  bottom: -15px;
+  left: 0;
 }
 
 
